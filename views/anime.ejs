@@ -1,0 +1,84 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="container-lg my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+          <div class="card-header bg-dark p-0 border-0">
+            <img src="<%= images.jpg.image_url %>" class="img-fluid w-100 img-anime" alt="Anime image for <%= title %>">
+          </div>
+          <div class="card-body bg-light">
+            <h5 class="card-title text-primary fw-bold fs-3 mb-3">
+              <%= title %>
+            </h5>
+            <p class="card-text text-secondary text-justify mb-4">
+              <%= synopsis %>
+            </p>
+            <% if (trailer.url !==null) { %>
+              <a href="<%= trailer.url %>" class="btn btn-warning px-4 me-2" target="_blank">Watch Trailer</a>
+              <% } else { %>
+                <button class="btn btn-outline-secondary px-4" disabled>No Trailer Found</button>
+                <% } %>
+          </div>
+          <ul class="list-group list-group-flush bg-light">
+            <li class="list-group-item bg-light"><strong>Episodes:</strong>
+              <%= episodes %>
+            </li>
+            <li class="list-group-item bg-light"><strong>Rating:</strong>
+              <%= rating %>
+            </li>
+            <li class="list-group-item bg-light"><strong>Score:</strong>
+              <%= score %>
+            </li>
+            <li class="list-group-item bg-light"><strong>Rank:</strong>
+              <%= rank %>
+            </li>
+            <li class="list-group-item bg-light"><strong>Popularity:</strong>
+              <%= popularity %>
+            </li>
+            <li class="list-group-item bg-light"><strong>Studios:</strong>
+              <% if (studios && studios.length> 0) { %>
+                <% studios.forEach(function(studio, idx) { %>
+                  <a href="<%= studio.url %>" target="_blank">
+                    <%= studio.name %>
+                  </a>
+                  <%= idx < studios.length - 1 ? ', ' : '' %>
+                    <% }) %>
+                      <% } else { %>
+                        <span>None</span>
+                        <% } %>
+            </li>
+            <li class="list-group-item bg-light"><strong>Genres:</strong>
+              <% if (genres && genres.length> 0) { %>
+                <% genres.forEach(function(genre, idx) { %>
+                  <a href="<%= genre.url %>" target="_blank">
+                    <%= genre.name %>
+                  </a>
+                  <%= idx < genres.length - 1 ? ', ' : '' %>
+                    <% }) %>
+                      <% } else { %>
+                        <span>None</span>
+                        <% } %>
+            </li>
+            <li class="list-group-item bg-light"><strong>Themes:</strong>
+              <% if (themes && themes.length> 0) { %>
+                <% themes.forEach(function(theme, idx) { %>
+                  <a href="<%= theme.url %>" target="_blank">
+                    <%= theme.name %>
+                  </a>
+                  <%= idx < themes.length - 1 ? ', ' : '' %>
+                    <% }) %>
+                      <% } else { %>
+                        <span>None</span>
+                        <% } %>
+            </li>
+          </ul>
+          <div class="card-footer bg-dark text-light text-end small">
+            <i class="bi bi-clock-history me-1"></i>Updated 2 days ago
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include("partials/footer.ejs") %>

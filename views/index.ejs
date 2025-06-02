@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="p-5 mb-4 bg-dark text-light rounded-4 shadow-lg">
+        <div class="container-fluid py-5">
+            <h1 class="display-4 fw-bold mb-3">Welcome to AnimeFinder</h1>
+            <p class="col-md-10 fs-4 mb-4">Discover a random anime to watch or get inspired by a random quote from your
+                favorite characters. Let the adventure begin!</p>
+            <a href="/anime" class="btn btn-warning btn-lg me-3">Find Random Anime</a>
+            <a href="/quote" class="btn btn-outline-light btn-lg">Get Random Quote</a>
+        </div>
+    </div>
+
+    <div class="row align-items-md-stretch mb-5">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div class="h-100 p-5 bg-body-tertiary border rounded-4 shadow-sm">
+                <h2 class="text-primary">Random Anime</h2>
+                <p>Not sure what to watch next? Click below to get a random anime recommendation and start your next
+                    binge-worthy journey!</p>
+                <a href="/anime" class="btn btn-primary">Show Me Anime</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="h-100 p-5 bg-dark text-light border rounded-4 shadow-sm">
+                <h2 class="text-warning">Random Quote</h2>
+                <p>Need some inspiration or a laugh? Get a random quote from an anime character and share the moment!
+                </p>
+                <a href="/quote" class="btn btn-warning">Show Me a Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/footer.ejs") %>

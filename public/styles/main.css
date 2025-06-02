@@ -1,0 +1,10 @@
+.img-anime {
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Remove inline styles from EJS and use these classes instead */
