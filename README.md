@@ -19,9 +19,9 @@ A web app to help you discover random anime to watch and get inspired by random 
 
 ### Installation
 1. Clone this repository or download the project folder.
-2. Navigate to the `Capstone project use of public api` directory:
+2. Navigate to the `random` directory:
    ```bash
-   cd "Capstone project use of public api"
+   cd "random"
    ```
 3. Install dependencies:
    ```bash
